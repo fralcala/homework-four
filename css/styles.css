@@ -103,7 +103,7 @@ nav .menu .links {
   justify-content: space-between;
 }
 
-@media all and (max-width: 710px) {
+@media all and (max-width: 800px) {
   nav .menu img {
     display: block;
     width: 30px;
@@ -297,7 +297,7 @@ nav .menu .links {
   text-transform: uppercase;
 }
 
-@media all and (max-width: 920px) {
+@media all and (max-width: 800px) {
   .home .specials {
     flex-direction: column;
   }

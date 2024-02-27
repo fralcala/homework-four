@@ -229,7 +229,8 @@
   }
 }
 
-@media all and (max-width: 920px) {
+// 920px
+@media all and (max-width: 800px) {
   .home {
     .specials {
       flex-direction: column;
