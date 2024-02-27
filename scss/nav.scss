@@ -28,12 +28,34 @@ nav {
     // background-color: aqua;
   }
 
-  .links {
-    min-width: 300px;
-    height: 42px;
-    // background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .menu {
+    img {
+      display: none;
+    }
+
+    .links {
+      min-width: 300px;
+      height: 42px;
+      // background-color: aqua;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // margin-right: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 710px) {
+  nav {
+    .menu {
+      img {
+        display: block;
+        width: 30px;
+        margin-right: 20px;
+      }
+      .links {
+        display: none;
+      }
+    }
   }
 }

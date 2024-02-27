@@ -31,7 +31,7 @@
   src: url(../fonts/fonts/GillSans-UltraBold.ttf);
 }
 @font-face {
-  font-family: Gill;
+  font-family: gill;
   src: url(../fonts/fonts/GillSans.ttf);
 }
 @font-face {
@@ -92,7 +92,10 @@ nav .logo {
   width: 92px;
   height: 42px;
 }
-nav .links {
+nav .menu img {
+  display: none;
+}
+nav .menu .links {
   min-width: 300px;
   height: 42px;
   display: flex;
@@ -100,6 +103,16 @@ nav .links {
   justify-content: space-between;
 }
 
+@media all and (max-width: 710px) {
+  nav .menu img {
+    display: block;
+    width: 30px;
+    margin-right: 20px;
+  }
+  nav .menu .links {
+    display: none;
+  }
+}
 .home {
   margin-top: -65px;
 }
@@ -122,7 +135,7 @@ nav .links {
   color: white;
 }
 .home .hero .callout h1 {
-  font-family: nova-exc;
+  font-family: nova-thin;
   font-size: 60px;
 }
 .home .hero .callout p {
@@ -142,7 +155,7 @@ nav .links {
   text-transform: uppercase;
 }
 .home .specials {
-  width: 818px;
+  max-width: 818px;
   margin: -50px auto 0 auto;
   display: flex;
   align-items: center;
@@ -160,6 +173,7 @@ nav .links {
 }
 .home .specials .box h2 {
   font-family: nova-exc;
+  font-weight: 100;
   font-size: 60px;
   text-transform: uppercase;
 }
@@ -197,17 +211,19 @@ nav .links {
   background-size: cover;
   background-position: center;
 }
-.home .form {
+.home .form-container {
+  margin: 60px 20px 0px 20px;
+}
+.home .form-container .form {
   max-width: 818px;
   margin: 0 auto;
   min-height: 200px;
-  margin-top: 60px;
 }
-.home .form h2 {
+.home .form-container .form h2 {
   font-size: 60px;
-  font-family: nova-exc;
+  font-family: nova-thin;
 }
-.home .form input {
+.home .form-container .form input {
   height: 58px;
   width: 100%;
   border: solid 1px;
@@ -215,56 +231,56 @@ nav .links {
   padding-left: 20px;
   font-size: 18px;
 }
-.home .form input,
-.home .form label {
+.home .form-container .form input,
+.home .form-container .form label {
   font-size: 18px;
   font-family: gill;
   margin-bottom: 20px;
 }
-.home .form .cal {
+.home .form-container .form .cal {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.home .form .cal input {
+.home .form-container .form .cal input {
   width: 698px;
 }
-.home .form .cal .cal-box {
+.home .form-container .form .cal .cal-box {
   width: 30px;
   height: 30px;
   position: absolute;
   right: 20px;
   bottom: 35px;
 }
-.home .form .info-container {
+.home .form-container .form .info-container {
   display: flex;
   justify-content: space-between;
 }
-.home .form .info-container .left-info {
+.home .form-container .form .info-container .left-info {
   width: 344px;
 }
-.home .form .info-container .right-info {
+.home .form-container .form .info-container .right-info {
   width: 453px;
 }
-.home .form .info-container2 {
+.home .form-container .form .info-container2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.home .form .info-container2 input {
+.home .form-container .form .info-container2 input {
   width: 103px;
 }
-.home .form .info-container2 img {
+.home .form-container .form .info-container2 img {
   position: relative;
   width: 20px;
   right: 70px;
   bottom: 10px;
 }
-.home .form .message input {
+.home .form-container .form .message input {
   height: 192px;
 }
-.home .form .button {
+.home .form-container .form .button {
   max-width: 813px;
   height: 60.59px;
   background-color: #79addc;
@@ -274,7 +290,7 @@ nav .links {
   align-items: center;
   margin-top: 37.8px;
 }
-.home .form .button span {
+.home .form-container .form .button span {
   font-size: 15px;
   font-family: gill;
   color: #ffffff;
@@ -287,6 +303,27 @@ nav .links {
   }
   .home .specials .box {
     margin-bottom: 30px;
+  }
+  .home .form-container .form label {
+    margin-right: 10px;
+  }
+  .home .form-container .form .info-container {
+    flex-direction: column;
+  }
+  .home .form-container .form .info-container .left-info {
+    max-width: 818px;
+    width: auto;
+  }
+  .home .form-container .form .info-container .right-info {
+    max-width: 818px;
+    width: auto;
+  }
+  .home .form-container .form .info-container2 {
+    flex-direction: column;
+  }
+  .home .form-container .form .info-container2 img {
+    left: 25px;
+    bottom: 55px;
   }
 }
 footer {
